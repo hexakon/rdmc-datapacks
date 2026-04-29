@@ -1,0 +1,1 @@
+execute at @e[type=marker,nbt={data:{puzzle_item:"ash_fall"}}] run particle ash ~ ~ ~ 0.7 0.11 0.7 0.24 4 force
