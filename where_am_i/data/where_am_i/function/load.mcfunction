@@ -1,0 +1,1 @@
+scoreboard objectives add where_am_i.left_game minecraft.custom:minecraft.leave_game

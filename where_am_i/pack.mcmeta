@@ -1,0 +1,6 @@
+{
+    "pack": {
+        "description": "Tells you what X value range you're supposed to build your branch at",
+        "pack_format": 94
+    }
+}
