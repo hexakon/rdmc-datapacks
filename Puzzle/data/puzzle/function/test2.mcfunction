@@ -1,1 +1,0 @@
-say function2 works
