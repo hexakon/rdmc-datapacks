@@ -1,4 +1,4 @@
-execute as @a[scores={where_am_i.left_game=1..}] at @s run tag @s hide ok
+execute as @a[scores={where_am_i.left_game=1..}] at @s run tag @s remove ok
 execute as @a[scores={where_am_i.left_game=1..}] at @s run scoreboard players reset @s where_am_i.left_game
 
 title @a[predicate=where_am_i:00] actionbar {"text":"Welcome! You're in the lobby. Don't build here. Run \"/function where_am_i:help\" for where to build."}
