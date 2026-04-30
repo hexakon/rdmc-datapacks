@@ -1,11 +1,12 @@
 scoreboard players operation @s puzzle.value = @n[nbt={data:{puzzle_item:"stairs_teleport"}}] puzzle.value
 scoreboard players operation @s puzzle.value.temp = @n[nbt={data:{puzzle_item:"stairs_teleport"}}] puzzle.value.temp
 
-tp ZmKvoiiA887240ZM ~ ~-8 ~500
-execute as @s[scores={puzzle.value=1,puzzle.value.temp=1}] run tp flcmeflcmeZflcme ~ ~-8 ~500
-execute as @s[scores={puzzle.value=-1,puzzle.value.temp=1}] run tp flcmeflcmeZflcme ~ ~8 ~-500
-execute as @s[scores={puzzle.value=1,puzzle.value.temp=0}] run tp flcmeflcmeZflcme ~ ~-12 ~500
-execute as @s[scores={puzzle.value=-1,puzzle.value.temp=0}] run tp flcmeflcmeZflcme ~ ~12 ~-500
+summon armor_stand ~ ~ ~ {Marker:1,Tags:["puzzle.clearspace"]}
+
+execute as @s[scores={puzzle.value=1,puzzle.value.temp=1}] run tp @n[tag=puzzle.clearspace] ~ ~-8 ~500
+execute as @s[scores={puzzle.value=-1,puzzle.value.temp=1}] run tp @n[tag=puzzle.clearspace] ~ ~8 ~-500
+execute as @s[scores={puzzle.value=1,puzzle.value.temp=0}] run tp @n[tag=puzzle.clearspace] ~ ~-12 ~500
+execute as @s[scores={puzzle.value=-1,puzzle.value.temp=0}] run tp @n[tag=puzzle.clearspace] ~ ~12 ~-500
 
 tag @s[scores={puzzle.value=1,puzzle.value.temp=1}] add puz.transfer.1
 tag @s[scores={puzzle.value=-1,puzzle.value.temp=1}] add puz.transfer.2
