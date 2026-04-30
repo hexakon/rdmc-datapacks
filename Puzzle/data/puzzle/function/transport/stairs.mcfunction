@@ -4,6 +4,6 @@ scoreboard players operation @s puzzle.currentfloor += @n[type=marker,nbt={data:
 execute if score @s[scores={puzzle.value.temp=1}] puzzle.value matches 2 run tp @s ~ ~-4 ~500 ~ ~
 execute unless score @s[scores={puzzle.value.temp=1}] puzzle.value matches 2 run tp @s ~ ~-8 ~500 ~ ~
 
-execute if score @s[scores={puzzle.value.temp=-1}] puzzle.value matches 1 run tp @s ~ ~4 ~500 ~ ~
-execute unless score @s[scores={puzzle.value.temp=-1}] puzzle.value matches 2 run tp @s ~ ~8 ~500 ~ ~
+execute if score @s[scores={puzzle.value.temp=-1}] puzzle.value matches 1 run tp @s ~ ~4 ~-500 ~ ~
+execute unless score @s[scores={puzzle.value.temp=-1}] puzzle.value matches 2 run tp @s ~ ~8 ~-500 ~ ~
 
