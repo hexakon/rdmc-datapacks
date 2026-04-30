@@ -6,11 +6,5 @@ execute at @e[type=marker,nbt={data:{puzzle_item:"stairs_teleport"}}] as @a[dist
 
 
 
-
-
-
-
-
-## Temporary
 scoreboard players add @e[type=armor_stand,tag=puzzle.clearspace] puzzle.value 1
 kill @e[type=armor_stand,tag=puzzle.clearspace,scores={puzzle.value=35..}]
