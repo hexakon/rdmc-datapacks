@@ -14,7 +14,7 @@ tag @s[scores={puzzle.value=-1,puzzle.value.temp=1}] add puz.transfer.2
 tag @s[scores={puzzle.value=1,puzzle.value.temp=0}] add puz.transfer.3
 tag @s[scores={puzzle.value=-1,puzzle.value.temp=0}] add puz.transfer.4
 
-schedule function puzzle:transport/stairs/after 16t
+schedule function puzzle:transport/stairs/after 4t
 
 
 
