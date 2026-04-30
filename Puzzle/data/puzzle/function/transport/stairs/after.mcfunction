@@ -7,4 +7,3 @@ tag @a remove puz.transfer.2
 tag @a remove puz.transfer.3
 tag @a remove puz.transfer.4
 scoreboard players set @a puzzle.teleporting 0
-kill @e[tag=puzzle.clearspace]

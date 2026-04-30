@@ -2,7 +2,7 @@ scoreboard players set @s puzzle.teleporting 1
 scoreboard players operation @s puzzle.value = @n[nbt={data:{puzzle_item:"stairs_teleport"}}] puzzle.value
 scoreboard players operation @s puzzle.value.temp = @n[nbt={data:{puzzle_item:"stairs_teleport"}}] puzzle.value.temp
 
-summon armor_stand ~ ~ ~ {Marker:1,Tags:["puzzle.clearspace"]}
+summon armor_stand ~ ~ ~ {NoGravity:1,Tags:["puzzle.clearspace"],Invisible:1}
 
 execute as @s[scores={puzzle.value=1,puzzle.value.temp=1}] run tp @n[tag=puzzle.clearspace] ~ ~-8 ~500
 execute as @s[scores={puzzle.value=-1,puzzle.value.temp=1}] run tp @n[tag=puzzle.clearspace] ~ ~8 ~-500
