@@ -1,5 +1,6 @@
-execute as @a[scores={where_am_i.left_game=1..}] at @s run tag @s remove ok
-execute as @a[scores={where_am_i.left_game=1..}] at @s run scoreboard players reset @s where_am_i.left_game
+## execute as @a[scores={where_am_i.left_game=1..}] at @s run tag @s remove ok
+## execute as @a[scores={where_am_i.left_game=1..}] at @s run scoreboard players reset @s where_am_i.left_game
+## I removed the reset on rejoin thing because 3 people complained to me about it. If you want it back please just repush it, i dont think its that big of a deal. -flcme
 
 title @a[predicate=where_am_i:00] actionbar {"text":"Welcome! You're in the lobby. Don't build here. Run \"/function where_am_i:help\" for where to build."}
 
