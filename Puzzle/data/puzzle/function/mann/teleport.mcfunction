@@ -1,2 +1,2 @@
-$tp @n[type=mannequin,scores={puzzle.mann.playerindex=$(playerindex)}] ~$(xOffset) ~$(yOffset) ~$(zOffset) ~ ~
+$tp @n[type=mannequin,scores={puzzle.mann.playerindex=$(playerindex)}] ~$(offsetX) ~$(offsetY) ~$(offsetZ) ~ ~
 $execute at @s unless entity @n[type=mannequin,distance=..$(radius),scores={puzzle.mann.index=$(index)}] run function puzzle:mann/disable_player
