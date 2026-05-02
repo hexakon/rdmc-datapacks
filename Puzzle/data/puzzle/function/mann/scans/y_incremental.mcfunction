@@ -4,10 +4,10 @@ execute store result storage puzzle:mannstats offsetX int 1 run scoreboard playe
 execute store result storage puzzle:mannstats offsetZ int 1 run scoreboard players get @s puzzle.mann.offsetZ
 execute store result storage puzzle:mannstats radius int 1 run scoreboard players get @s puzzle.mann.radius
 
-execute store result score $yIncremental puzzle.value.temp run data get entity @s Pos[1]
+execute store result score $yIncremental puzzle.value.temp run data get entity @s Pos[1] 10
 scoreboard players operation $yIncremental puzzle.value.temp *= $yIncremental puzzle.value
 scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalB puzzle.value
-execute store result storage puzzle:mannstats offsetY int 1 run scoreboard players get $yIncremental puzzle.value.temp
+execute store result storage puzzle:mannstats offsetY double 0.1 run scoreboard players get $yIncremental puzzle.value.temp
 
 
 
