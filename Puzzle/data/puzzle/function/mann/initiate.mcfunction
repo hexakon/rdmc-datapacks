@@ -18,3 +18,5 @@ execute positioned ~ ~-2 ~ as @s[scores={puzzle.mann.styling=2}] run summon mann
 execute positioned ~ ~-2 ~ as @s[scores={puzzle.mann.styling=3}] run summon mannequin ~ ~ ~ {CustomName:"Dinnerbone",Tags:["puzzle.mann.creation","puzzle.flcme.clone"],Invulnerable:1,Silent:1,NoGravity:1}
 execute positioned ~ ~-2 ~ run data modify entity @n[tag=puzzle.mann.creation] profile."id" set from entity @s UUID
 execute positioned ~ ~-2 ~ run scoreboard players operation @n[tag=puzzle.mann.creation] puzzle.mann.playerindex = @s puzzle.mann.playerindex
+execute positioned ~ ~-2 ~ run scoreboard players operation @n[tag=puzzle.mann.creation] puzzle.mann.styling = @s puzzle.mann.styling
+execute as @n[tag=puzzle.mann.creation,{scores={puzzle.mann.styling=3}}] run data merge entity @s {CustomName:"Dinnerbone"}
