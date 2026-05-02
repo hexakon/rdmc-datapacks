@@ -4,6 +4,10 @@ execute store result storage puzzle:mannstats offsetX int 1 run scoreboard playe
 execute store result storage puzzle:mannstats offsetY int 1 run scoreboard players get @s puzzle.mann.offsetY
 execute store result storage puzzle:mannstats offsetZ int 1 run scoreboard players get @s puzzle.mann.offsetZ
 execute store result storage puzzle:mannstats radius int 1 run scoreboard players get @s puzzle.mann.radius
+execute store result storage puzzle:mannstats yaw float 1 run data get entity @s Rotation[0]
+execute store result storage puzzle:mannstats pitch float 1 run data get entity @s Rotation[1]
+
+
 
 execute as @s at @s run function puzzle:mann/teleport with storage puzzle:mannstats
 execute unless entity @e[type=marker,nbt={data:{puzzle:"mannequin_indicator"}},distance=..10] at @s run function puzzle:mann/disable

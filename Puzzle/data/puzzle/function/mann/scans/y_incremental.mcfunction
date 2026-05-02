@@ -3,17 +3,28 @@ execute store result storage puzzle:mannstats index int 1 run scoreboard players
 execute store result storage puzzle:mannstats offsetX int 1 run scoreboard players get @s puzzle.mann.offsetX
 execute store result storage puzzle:mannstats offsetZ int 1 run scoreboard players get @s puzzle.mann.offsetZ
 execute store result storage puzzle:mannstats radius int 1 run scoreboard players get @s puzzle.mann.radius
+execute store result storage puzzle:mannstats yaw float 1 run data get entity @s Rotation[0]
+
 
 execute store result score $yIncremental puzzle.value.temp run data get entity @s Pos[1] 10
 scoreboard players operation $yIncremental puzzle.value.temp *= $yIncremental puzzle.value
 scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalB puzzle.value
 execute as @s[scores={puzzle.mann.jump=1..}] run scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalC puzzle.value
+
+execute store result $yIncrementalPitch puzzle.value run data get entity @s Rotation[1]
+scoreboard players operation $yIncrementalPitch puzzle.value *= $yIncremental puzzle.value
+
+
+
+
+
 execute as @s[scores={puzzle.mann.jump=1..}] run scoreboard players add @s puzzle.mann.jump.temp 1
 execute as @s[scores={puzzle.mann.jump.temp=7..}] run scoreboard players set @s puzzle.mann.jump 0
 execute as @s[scores={puzzle.mann.jump.temp=7..}] run scoreboard players set @s puzzle.mann.jump.temp 0
 
 
 execute store result storage puzzle:mannstats offsetY double 0.1 run scoreboard players get $yIncremental puzzle.value.temp
+execute store result storage puzzle:mannstats pitch float 1 run scoreboard players get $yIncrementalPitch puzzle.value
 
 
 execute as @s at @s run function puzzle:mann/teleport with storage puzzle:mannstats
