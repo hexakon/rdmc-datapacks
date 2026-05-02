@@ -9,8 +9,8 @@ scoreboard players operation $yIncremental puzzle.value.temp *= $yIncremental pu
 scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalB puzzle.value
 execute as @s[scores={puzzle.mann.jump=1..}] run scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalC puzzle.value
 execute as @s[scores={puzzle.mann.jump=1..}] run scoreboard players add @s puzzle.mann.jump.temp 1
-execute as @s[scores={puzzle.mann.jump.temp=20..}] run scoreboard players set @s puzzle.mann.jump 0
-execute as @s[scores={puzzle.mann.jump.temp=20..}] run scoreboard players set @s puzzle.mann.jump.temp 0
+execute as @s[scores={puzzle.mann.jump.temp=9..}] run scoreboard players set @s puzzle.mann.jump 0
+execute as @s[scores={puzzle.mann.jump.temp=9..}] run scoreboard players set @s puzzle.mann.jump.temp 0
 
 
 execute store result storage puzzle:mannstats offsetY double 0.1 run scoreboard players get $yIncremental puzzle.value.temp
