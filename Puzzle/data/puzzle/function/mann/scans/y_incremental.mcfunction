@@ -11,7 +11,7 @@ scoreboard players operation $yIncremental puzzle.value.temp *= $yIncremental pu
 scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalB puzzle.value
 execute as @s[scores={puzzle.mann.jump=1..}] run scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalC puzzle.value
 
-execute store result $yIncrementalPitch puzzle.value run data get entity @s Rotation[1]
+execute store result score $yIncrementalPitch puzzle.value run data get entity @s Rotation[1]
 scoreboard players operation $yIncrementalPitch puzzle.value *= $yIncremental puzzle.value
 
 
