@@ -1,3 +1,3 @@
-execute store result storage puzzle:mannstats playerindex int 1 run scoreboard players get @s puzzle.mann.playerindex
-execute store result storage puzzle:mannstats index int 1 run scoreboard players get @s puzzle.mann.index
-execute as @s at @s run function puzzle:mann/teleport with storage puzzle:mannstats
+execute as @s[scores={puzzle.mann.styling=1}] at @s run function puzzle:mann/scans/basic
+execute as @s[scores={puzzle.mann.styling=2}] at @s run function puzzle:mann/scans/basic
+execute as @s[scores={puzzle.mann.styling=3}] at @s run function puzzle:mann/scans/y_incremental

@@ -1,2 +1,2 @@
-execute store result storage puzzle:disablemann p int 1 run scoreboard players get @s puzzle.mann.playerindex
+execute store result storage puzzle:disablemann pIndex int 1 run scoreboard players get @s puzzle.mann.playerindex
 execute as @s at @s run function puzzle:mann/disable_finish with storage puzzle:disablemann
