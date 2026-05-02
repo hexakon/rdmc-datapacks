@@ -8,10 +8,10 @@ execute store result score $yIncremental puzzle.value.temp run data get entity @
 scoreboard players operation $yIncremental puzzle.value.temp *= $yIncremental puzzle.value
 scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalB puzzle.value
 execute store result storage puzzle:mannstats offsetY double 0.1 run scoreboard players get $yIncremental puzzle.value.temp
-execute if score @s puzzle.mann.jump matches 1 run scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalC puzzle.value
-scoreboard players set @s puzzle.mann.jump 0
-
-
+execute as @s[scores={puzzle.mann.jump=1..}] run scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalC puzzle.value
+execute as @s[scores={puzzle.mann.jump=1..}] run scoreboard players add @s puzzle.mann.jump.temp 1
+execute as @s[scores={puzzle.mann.jump.temp=20..}] run scoreboard players set @s puzzle.mann.jump 0
+execute as @s[scores={puzzle.mann.jump.temp=20..}] run scoreboard players set @s puzzle.mann.jump.temp 0
 
 execute as @s at @s run function puzzle:mann/teleport with storage puzzle:mannstats
 execute unless entity @e[type=marker,nbt={data:{puzzle:"mannequin_indicator"}},distance=..10] at @s run function puzzle:mann/disable
