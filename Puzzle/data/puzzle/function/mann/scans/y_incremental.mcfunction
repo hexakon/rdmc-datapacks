@@ -8,8 +8,8 @@ execute store result score $yIncremental puzzle.value.temp run data get entity @
 scoreboard players operation $yIncremental puzzle.value.temp *= $yIncremental puzzle.value
 scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalB puzzle.value
 execute store result storage puzzle:mannstats offsetY double 0.1 run scoreboard players get $yIncremental puzzle.value.temp
-
-
+execute if score @s puzzle.mann.jump matches 1 run scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalC puzzle.value
+scoreboard players set @s puzzle.mann.jump 0
 
 
 
