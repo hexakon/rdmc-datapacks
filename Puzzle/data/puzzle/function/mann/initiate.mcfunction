@@ -13,7 +13,7 @@ scoreboard players add $pzlManIndexOffset puzzle.value 1
 scoreboard players operation @s puzzle.mann.playerindex = $pzlManIndexOffset puzzle.value
 
 ## Mannequon summoning
-execute positioned ~ ~-2 ~ unless entity @s[scores={puzzle.mann.styling=2}] run summon mannequin ~ ~ ~ {Tags:["puzzle.mann.creation","puzzle.flcme.clone"],Invulnerable:1,Silent:1,NoGravity:1}
+execute positioned ~ ~-2 ~ as @s[scores={puzzle.mann.styling=1}] run summon mannequin ~ ~ ~ {Tags:["puzzle.mann.creation","puzzle.flcme.clone"],Invulnerable:1,Silent:1,NoGravity:1}
 execute positioned ~ ~-2 ~ as @s[scores={puzzle.mann.styling=2}] run summon mannequin ~ ~ ~ {CustomName:"Dinnerbone",Tags:["puzzle.mann.creation","puzzle.flcme.clone"],Invulnerable:1,Silent:1,NoGravity:1}
 execute positioned ~ ~-2 ~ as @s[scores={puzzle.mann.styling=3}] run summon mannequin ~ ~ ~ {CustomName:"Dinnerbone",Tags:["puzzle.mann.creation","puzzle.flcme.clone"],Invulnerable:1,Silent:1,NoGravity:1}
 execute positioned ~ ~-2 ~ run data modify entity @n[tag=puzzle.mann.creation] profile."id" set from entity @s UUID
