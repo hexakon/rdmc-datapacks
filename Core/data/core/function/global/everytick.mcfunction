@@ -1,0 +1,1 @@
+execute as @e at @s run function core:global/tick_all_entities
