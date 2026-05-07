@@ -1,0 +1,3 @@
+scoreboard objectives add core.woolAnimationFrame dummy
+scoreboard objectives add core.pickedUpRedWool minecraft.picked_up:minecraft.red_wool
+scoreboard objectives add core.pickedUpYellowWool minecraft.picked_up:minecraft.yellow_wool

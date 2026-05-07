@@ -1,0 +1,5 @@
+$data modify storage woolfoundcolors blockType set value "$(blockType)"
+$data modify storage woolfoundcolors color1 set value "$(color1)"
+$data modify storage woolfoundcolors color2 set value "$(color2)"
+$data modify storage woolfoundcolors title set value "$(title)"
+$data modify storage woolfoundcolors branch set value "$(branch)"

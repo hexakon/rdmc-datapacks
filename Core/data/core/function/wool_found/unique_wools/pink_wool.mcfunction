@@ -1,0 +1,2 @@
+function core:wool_found/set_wool_storage {color1:"#f77ce1", color2:"#ba88b1", title:"Pink Wool", blockType:"pink_wool", branch:"Parkour"}
+execute as @a run function core:totem_pop/run with storage woolfoundcolors
