@@ -2,8 +2,8 @@ execute at @e[type=marker,nbt={data:{puzzle_item:"ash_fall"}}] run particle ash 
 execute at @e[type=marker,nbt={data:{puzzle_item:"stairs_teleport"}}] as @a[distance=..2.85,scores={puzzle.teleporting=0}] at @s run function puzzle:transport/stairs
 execute at @e[type=marker,nbt={data:{puzzle:"mannequin_indicator"}}] as @a[distance=..5] unless score @s puzzle.mann.index = @e[type=marker,nbt={data:{puzzle:"mannequin_indicator"}},distance=..5,limit=1] puzzle.mann.index run function puzzle:mann/initiate
 execute as @a[scores={puzzle.mann.active=1}] at @s run function puzzle:mann/scan
-execute as @e[tag=puzzle.elevator,scores={puzzle.value.temp=1..,puzzle.value.indicator=1}] at @s run function puzzle:transport/elevator/open_tick
-execute as @e[tag=puzzle.elevator,scores={puzzle.value.temp=1..,puzzle.value.indicator=2}] at @s run function puzzle:transport/elevator/close_tick
+execute as @e[tag=puzzle_elevator,scores={puzzle.value.temp=1..,puzzle.value.indicator=1}] at @s run function puzzle:transport/elevator/open_tick
+execute as @e[tag=puzzle_elevator,scores={puzzle.value.temp=1..,puzzle.value.indicator=2}] at @s run function puzzle:transport/elevator/close_tick
 
 
 scoreboard players add @e[type=armor_stand,tag=puzzle.clearspace] puzzle.value 1
