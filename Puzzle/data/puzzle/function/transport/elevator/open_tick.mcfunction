@@ -4,14 +4,14 @@ scoreboard players remove @s puzzle.value.temp 1
 ## but for right now its fine.
 
 
-$execute as @s[scores={puzzle.value.temp=150..200}] as @e[tag=puzzle_increment_1,tag=puz_door_L,scores={puzzle.value=$(index)}] at @s run tp @s ~-0.01 ~ ~
-$execute as @s[scores={puzzle.value.temp=150..200}] as @e[tag=puzzle_increment_1,tag=puz_door_R,scores={puzzle.value=$(index)}] at @s run tp @s ~0.01 ~ ~
+$execute as @s[scores={puzzle.value.temp=150..200}] as @e[tag=puzzle_increment_1,tag=puz_door_L,scores={puzzle.value=$(index)}] at @s run tp @s ~-0.02 ~ ~
+$execute as @s[scores={puzzle.value.temp=150..200}] as @e[tag=puzzle_increment_1,tag=puz_door_R,scores={puzzle.value=$(index)}] at @s run tp @s ~0.02 ~ ~
 
-$execute as @s[scores={puzzle.value.temp=100..150}] as @e[tag=puzzle_increment_2,tag=puz_door_L,scores={puzzle.value=$(index)}] at @s run tp @s ~-0.01 ~ ~
-$execute as @s[scores={puzzle.value.temp=100..150}] as @e[tag=puzzle_increment_2,tag=puz_door_R,scores={puzzle.value=$(index)}] at @s run tp @s ~0.01 ~ ~
+$execute as @s[scores={puzzle.value.temp=100..150}] as @e[tag=puzzle_increment_2,tag=puz_door_L,scores={puzzle.value=$(index)}] at @s run tp @s ~-0.02 ~ ~
+$execute as @s[scores={puzzle.value.temp=100..150}] as @e[tag=puzzle_increment_2,tag=puz_door_R,scores={puzzle.value=$(index)}] at @s run tp @s ~0.02 ~ ~
 
-$execute as @s[scores={puzzle.value.temp=50..100}] as @e[tag=puzzle_increment_3,tag=puz_door_L,scores={puzzle.value=$(index)}] at @s run tp @s ~-0.01 ~ ~
-$execute as @s[scores={puzzle.value.temp=50..100}] as @e[tag=puzzle_increment_3,tag=puz_door_R,scores={puzzle.value=$(index)}] at @s run tp @s ~0.01 ~ ~
+$execute as @s[scores={puzzle.value.temp=50..100}] as @e[tag=puzzle_increment_3,tag=puz_door_L,scores={puzzle.value=$(index)}] at @s run tp @s ~-0.02 ~ ~
+$execute as @s[scores={puzzle.value.temp=50..100}] as @e[tag=puzzle_increment_3,tag=puz_door_R,scores={puzzle.value=$(index)}] at @s run tp @s ~0.02 ~ ~
 
 
 $execute as @s[scores={puzzle.value.temp=195}] as @e[tag=puzzle_increment_2,scores={puzzle.value=$(index)}] at @s run tp @s ~ ~0.001 ~0.001
