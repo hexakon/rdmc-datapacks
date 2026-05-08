@@ -13,4 +13,10 @@ $execute as @s[scores={puzzle.value.temp=100..150}] as @e[tag=puzzle_increment_2
 $execute as @s[scores={puzzle.value.temp=50..100}] as @e[tag=puzzle_increment_3,tag=puz_door_L,scores={puzzle.value=$(index)}] at @s run tp @s ~0.01 ~ ~
 $execute as @s[scores={puzzle.value.temp=50..100}] as @e[tag=puzzle_increment_3,tag=puz_door_R,scores={puzzle.value=$(index)}] at @s run tp @s ~-0.01 ~ ~
 
+$execute as @s[scores={puzzle.value.temp=195}] as @e[tag=puzzle_increment_2,scores={puzzle.value=$(index)}] at @s run tp @s ~ ~ ~0.001
+$execute as @s[scores={puzzle.value.temp=195}] as @e[tag=puzzle_increment_3,scores={puzzle.value=$(index)}] at @s run tp @s ~ ~ ~0.001
+
+$execute as @s[scores={puzzle.value.temp=20}] as @e[tag=puzzle_increment_2,scores={puzzle.value=$(index)}] at @s run tp @s ~ ~ ~-0.001
+$execute as @s[scores={puzzle.value.temp=20}] as @e[tag=puzzle_increment_3,scores={puzzle.value=$(index)}] at @s run tp @s ~ ~ ~-0.001
+
 execute as @s[scores={puzzle.value.temp=1..5}] run tag @s remove puz.locked
