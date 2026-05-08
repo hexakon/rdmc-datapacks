@@ -2,3 +2,4 @@ scoreboard players set @n[tag=puzzle_elevator,tag=!puz.locked,scores={puzzle.val
 scoreboard players set @n[tag=puzzle_elevator,tag=!puz.locked,scores={puzzle.value.locked=1}] puzzle.value.temp 201
 tag @n[tag=puzzle_elevator,tag=!puz.locked,scores={puzzle.value.locked=1}] add puz.locked
 scoreboard players set @n[tag=puzzle_elevator] puzzle.value.locked 2
+playsound puzzle:puz.elevator.close block @a ~ ~ ~ 0.3 0
