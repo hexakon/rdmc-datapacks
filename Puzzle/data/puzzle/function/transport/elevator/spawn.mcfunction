@@ -12,6 +12,7 @@ scoreboard players add $elevatorDoorIndex puzzle.value 1
 scoreboard players operation @e[tag=puz_elevator_setup_index] puzzle.value = $elevatorDoorIndex puzzle.value
 scoreboard players set @e[tag=puz_door_setup_L] puzzle.value.indicator -1
 scoreboard players set @e[tag=puz_door_setup_R] puzzle.value.indicator 1
+scoreboard players set @n[tag=puzzle_elevator] puzzle.value.locked 2
 tag @e remove puz_elevator_setup_index
 tag @e remove puz_door_setup_L
 tag @e remove puz_door_setup_R
