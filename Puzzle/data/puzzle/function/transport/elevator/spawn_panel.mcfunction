@@ -10,9 +10,16 @@ summon minecraft:text_display ~0.47 ~0.936 ~-0.13444 {alignment: "center", backg
 summon minecraft:text_display ~0.47 ~1.187 ~-0.13444 {alignment: "center", background: 0, default_background: 0b, line_width: 200, see_through: 0b, shadow: 0b, text: {color: "green", text: "3"}, text_opacity: -1b, transformation: {left_rotation: [0.0f, -0.7071068f, 0.0f, 0.7071068f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.68f, 0.68000007f, 0.68f], translation: [0.0f, 0.0f, 0.0f]}}
 summon minecraft:text_display ~0.47 ~1.438 ~-0.13444 {alignment: "center", background: 0, default_background: 0b, line_width: 200, see_through: 0b, shadow: 0b, text: {color: "green", text: "4"}, text_opacity: -1b, transformation: {left_rotation: [0.0f, -0.7071068f, 0.0f, 0.7071068f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.68f, 0.68000007f, 0.68f], translation: [0.0f, 0.0f, 0.0f]}}
 summon minecraft:text_display ~0.47 ~1.689 ~-0.13444 {alignment: "center", background: 0, default_background: 0b, line_width: 200, see_through: 0b, shadow: 0b, text: {color: "green", text: "5"}, text_opacity: -1b, transformation: {left_rotation: [0.0f, -0.7071068f, 0.0f, 0.7071068f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.68f, 0.68000007f, 0.68f], translation: [0.0f, 0.0f, 0.0f]}}
-
-
-
-
+scoreboard players operation @n[tag=puzzle_elevator_button,limit=5] puzzle.value = $dev puzzle.value
+scoreboard players set @n[tag=puz_el_assign_floor_1] puzzle.value.indicator 1
+scoreboard players set @n[tag=puz_el_assign_floor_2] puzzle.value.indicator 2
+scoreboard players set @n[tag=puz_el_assign_floor_3] puzzle.value.indicator 3
+scoreboard players set @n[tag=puz_el_assign_floor_4] puzzle.value.indicator 4
+scoreboard players set @n[tag=puz_el_assign_floor_5] puzzle.value.indicator 5
+tag @n[tag=puz_el_assign_floor_5] remove puz_el_assign_floor_5
+tag @n[tag=puz_el_assign_floor_4] remove puz_el_assign_floor_4
+tag @n[tag=puz_el_assign_floor_3] remove puz_el_assign_floor_3
+tag @n[tag=puz_el_assign_floor_2] remove puz_el_assign_floor_2
+tag @n[tag=puz_el_assign_floor_1] remove puz_el_assign_floor_1
 
 
