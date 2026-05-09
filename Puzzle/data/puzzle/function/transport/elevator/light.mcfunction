@@ -1,0 +1,2 @@
+$execute as @s[scores={puzzle.value=$(elevator),puzzle.value.indicator=$(floor)}] run data merge entity @s {text:{color:"gold",text:"$(floor)"}}
+$execute unless entity @s[scores={puzzle.value=$(elevator),puzzle.value.indicator=$(floor)}] run data merge entity @s {text:[{"score":{"name":"@s","objective":"puzzle.value.indicator"},"color":"white"}]}
