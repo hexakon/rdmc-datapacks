@@ -1,4 +1,4 @@
-summon minecraft:item_display ~-0.001 ~1 ~ {item: {components: {"minecraft:item_model": "puzzle:lobby/elevator_panel_untouched"}, count: 1, id: "minecraft:orange_dye"}, transformation: {left_rotation: [0.0f, 1.0f, 0.0f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.99999994f, 1.0000001f, 0.99999994f], translation: [0.0f, 0.0f, 0.0f]}}
+summon minecraft:item_display ~-0.001 ~1 ~ {Tags:["puzzle.elevator.panel"],item: {components: {"minecraft:item_model": "puzzle:lobby/elevator_panel_untouched"}, count: 1, id: "minecraft:orange_dye"}, transformation: {left_rotation: [0.0f, 1.0f, 0.0f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.99999994f, 1.0000001f, 0.99999994f], translation: [0.0f, 0.0f, 0.0f]}}
 
 summon minecraft:interaction ~0.575 ~0.653 ~0.1255 {Tags:["puzzle_elevator_button","puz_el_assign_floor_1"],width:0.3125f,height:0.25f}
 summon minecraft:interaction ~0.575 ~0.9053 ~0.1255 {Tags:["puzzle_elevator_button","puz_el_assign_floor_2"],width:0.3125f,height:0.25f}
@@ -22,6 +22,7 @@ scoreboard players set @n[tag=puz_el_assign_floor_2] puzzle.value.indicator 2
 scoreboard players set @n[tag=puz_el_assign_floor_3] puzzle.value.indicator 3
 scoreboard players set @n[tag=puz_el_assign_floor_4] puzzle.value.indicator 4
 scoreboard players set @n[tag=puz_el_assign_floor_5] puzzle.value.indicator 5
+scoreboard players operation @n[tag=puzzle.elevator.panel] puzzle.value.indicator  = $dev puzzle.value
 tag @n[tag=puz_el_assign_floor_5] remove puz_el_assign_floor_5
 tag @n[tag=puz_el_assign_floor_4] remove puz_el_assign_floor_4
 tag @n[tag=puz_el_assign_floor_3] remove puz_el_assign_floor_3
