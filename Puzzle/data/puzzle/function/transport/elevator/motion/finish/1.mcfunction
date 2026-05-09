@@ -3,6 +3,6 @@ execute if score currentFloor.1 puzzle.value matches 2 positioned 950020 37 -10 
 execute if score currentFloor.1 puzzle.value matches 3 positioned 950020 37 -10 as @a[distance=..2] at @s run tp @s ~ ~-32 ~1000
 execute if score currentFloor.1 puzzle.value matches 4 positioned 950020 37 -10 as @a[distance=..2] at @s run tp @s ~ ~-32 ~1500
 execute if score currentFloor.1 puzzle.value matches 5 positioned 950020 37 -10 as @a[distance=..2] at @s run tp @s ~ ~-32 ~2000
-execute store result storage puzzle:elevatorland floor int 1 run scoreboard players get currentFloor.1
+execute store result storage puzzle:elevatorland floor int 1 run scoreboard players get currentFloor.1 puzzle.value
 data modify storage puzzle:elevatorland elevator set value 1
 function puzzle:transport/elevator/motion/open with storage puzzle:elevatorland
