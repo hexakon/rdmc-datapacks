@@ -22,7 +22,7 @@ scoreboard players set @n[tag=puz_el_assign_floor_2] puzzle.value.indicator 2
 scoreboard players set @n[tag=puz_el_assign_floor_3] puzzle.value.indicator 3
 scoreboard players set @n[tag=puz_el_assign_floor_4] puzzle.value.indicator 4
 scoreboard players set @n[tag=puz_el_assign_floor_5] puzzle.value.indicator 5
-scoreboard players operation @n[tag=puzzle.elevator.panel] puzzle.value.indicator  = $dev puzzle.value
+scoreboard players operation @n[tag=puzzle.elevator.panel] puzzle.value.indicator = $dev puzzle.value
 tag @n[tag=puz_el_assign_floor_5] remove puz_el_assign_floor_5
 tag @n[tag=puz_el_assign_floor_4] remove puz_el_assign_floor_4
 tag @n[tag=puz_el_assign_floor_3] remove puz_el_assign_floor_3
