@@ -1,3 +1,5 @@
+execute as @s at @s run function puzzle:mann/disable
+
 
 ## Copy offset values for mannequin teleports.
 scoreboard players operation @s puzzle.mann.index = @n[type=marker,nbt={data:{puzzle:"mannequin_indicator"}}] puzzle.mann.index
