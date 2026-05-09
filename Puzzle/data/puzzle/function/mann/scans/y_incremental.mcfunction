@@ -8,7 +8,7 @@ execute store result storage puzzle:mannstats yaw float 1 run data get entity @s
 
 execute store result score $yIncremental puzzle.value.temp run data get entity @s Pos[1] 10
 scoreboard players operation $yIncremental puzzle.value.temp *= $yIncremental puzzle.value
-scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalB puzzle.value
+scoreboard players operation $yIncremental puzzle.value.temp -= @s puzzle.mann.incremental
 execute as @s[scores={puzzle.mann.jump=1..}] run scoreboard players operation $yIncremental puzzle.value.temp -= $yIncrementalC puzzle.value
 
 execute store result score $yIncrementalPitch puzzle.value run data get entity @s Rotation[1]

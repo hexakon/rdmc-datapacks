@@ -6,6 +6,7 @@ scoreboard players operation @s puzzle.mann.offsetX = @n[type=marker,nbt={data:{
 scoreboard players operation @s puzzle.mann.offsetY = @n[type=marker,nbt={data:{puzzle:"mannequin_indicator"}}] puzzle.mann.offsetY
 scoreboard players operation @s puzzle.mann.offsetZ = @n[type=marker,nbt={data:{puzzle:"mannequin_indicator"}}] puzzle.mann.offsetZ
 scoreboard players operation @s puzzle.mann.radius = @n[type=marker,nbt={data:{puzzle:"mannequin_indicator"}}] puzzle.mann.radius
+scoreboard players operation @s puzzle.mann.incremental = @n[type=marker,nbt={data:{puzzle:"mannequin_indicator"}}] puzzle.mann.incremental
 scoreboard players set @s puzzle.mann.active 1
 
 ## Give our player and their mannequin a unique index.
