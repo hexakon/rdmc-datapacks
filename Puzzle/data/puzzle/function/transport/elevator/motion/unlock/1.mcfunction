@@ -1,0 +1,1 @@
+scoreboard players set elevator.lock.1 puzzle.value 0
