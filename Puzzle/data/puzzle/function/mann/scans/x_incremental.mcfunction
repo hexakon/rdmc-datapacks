@@ -4,7 +4,6 @@ execute store result storage puzzle:mannstats offsetY int 1 run scoreboard playe
 execute store result storage puzzle:mannstats offsetZ int 1 run scoreboard players get @s puzzle.mann.offsetZ
 execute store result storage puzzle:mannstats radius int 1 run scoreboard players get @s puzzle.mann.radius
 execute store result storage puzzle:mannstats yaw float 1 run data get entity @s Rotation[0]
-execute store result storage puzzle:mannstats pitch float 1 run data get entity @s Rotation[1]
 
 execute store result score $puzzleStyling3Scan puzzle.value run data get entity @s Pos[0] 10
 scoreboard players operation $puzzleStyling3Scan puzzle.value -= @s puzzle.mann.origin
