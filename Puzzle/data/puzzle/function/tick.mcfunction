@@ -7,7 +7,7 @@ execute as @e[tag=puzzle_elevator,scores={puzzle.value.temp=1..,puzzle.value.ind
 
 
 execute as @e[tag=puzzle_elevator_button,nbt={interaction:{}}] at @s run function puzzle:transport/elevator/hit_button
-
+execute at @e[nbt={data:{puzzle:"lobby_mirror"}}] if entity @a[distance=..8] run function puzzle:dev/clone_lobby
 
 
 

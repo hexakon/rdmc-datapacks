@@ -1,0 +1,6 @@
+execute if block 949966 0 1 mangrove_door[open=true] run setblock 949976 0 1 mangrove_door[open=true]
+execute if block 949966 0 1 mangrove_door[open=false] run setblock 949976 0 1 mangrove_door[open=false]
+execute if block 949966 0 3 mangrove_door[open=true] run setblock 949976 0 1 mangrove_door[open=true]
+execute if block 949966 0 3 mangrove_door[open=false] run setblock 949976 0 1 mangrove_door[open=false]
+execute if block 949966 0 5 mangrove_door[open=true] run setblock 949976 0 1 mangrove_door[open=true]
+execute if block 949966 0 5 mangrove_door[open=false] run setblock 949976 0 1 mangrove_door[open=false]
