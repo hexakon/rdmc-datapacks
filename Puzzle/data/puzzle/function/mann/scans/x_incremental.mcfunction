@@ -12,5 +12,13 @@ scoreboard players operation $puzzleStyling3Scan puzzle.value *= $-2 puzzle.valu
 scoreboard players operation $puzzleStyling3Scan puzzle.value /= $10 puzzle.value
 execute store result storage puzzle:mannstats offsetX int 1 run scoreboard players get $puzzleStyling3Scan puzzle.value
 
+execute store result score $xIncrementalPitch puzzle.value run data get entity @s Rotation[1]
+scoreboard players operation $xIncrementalPitch puzzle.value *= $-1 puzzle.value
+execute store result storage puzzle:mannstats pitch float 1 run scoreboard players get $xIncrementalPitch puzzle.value
+
+
+
+
+
 execute as @s at @s run function puzzle:mann/teleport with storage puzzle:mannstats
 execute unless entity @e[type=marker,nbt={data:{puzzle:"mannequin_indicator"}},distance=..10] at @s run function puzzle:mann/disable
