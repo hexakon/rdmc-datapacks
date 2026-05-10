@@ -9,7 +9,8 @@ execute store result storage puzzle:mannstats pitch float 1 run data get entity 
 execute store result score $puzzleStyling3Scan puzzle.value run data get entity @s Pos[0] 10
 scoreboard players operation $puzzleStyling3Scan puzzle.value -= @s puzzle.mann.origin
 scoreboard players operation $puzzleStyling3Scan puzzle.value *= $-2 puzzle.value
-execute store result storage puzzle:mannstats offsetX int 1 run scoreboard players get $puzzleStyling3Scan puzzle.value
+scoreboard players operation $puzzleStyling3Scan puzzle.value /= $10 puzzle.value
+execute store result storage puzzle:mannstats offsetX double 0.1 run scoreboard players get $puzzleStyling3Scan puzzle.value
 
 execute as @s at @s run function puzzle:mann/teleport with storage puzzle:mannstats
 execute unless entity @e[type=marker,nbt={data:{puzzle:"mannequin_indicator"}},distance=..10] at @s run function puzzle:mann/disable
