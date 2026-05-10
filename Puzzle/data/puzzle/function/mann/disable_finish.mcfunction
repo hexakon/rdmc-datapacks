@@ -4,4 +4,4 @@ $scoreboard players set @a[scores={puzzle.mann.playerindex=$(pIndex)}] puzzle.ma
 forceload add 900444 900444
 $tp @e[type=mannequin,scores={puzzle.mann.playerindex=$(pIndex)}] 900444 44 900444
 $kill @e[type=mannequin,scores={puzzle.mann.playerindex=$(pIndex)}]
-forceload remove 900444 900444
+schedule function puzzle:mann/disable_clearspace 40t replace
