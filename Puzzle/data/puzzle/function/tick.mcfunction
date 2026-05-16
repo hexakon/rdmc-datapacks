@@ -13,3 +13,7 @@ execute at @e[nbt={data:{puzzle:"lobby_mirror"}}] if entity @a[distance=..8] run
 
 scoreboard players add @e[type=armor_stand,tag=puzzle.clearspace] puzzle.value 1
 kill @e[type=armor_stand,tag=puzzle.clearspace,scores={puzzle.value=35..}]
+
+
+
+execute as @a[tag=flcme.dev.size] run function puzzle:dev/size
