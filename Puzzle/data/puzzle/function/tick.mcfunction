@@ -16,4 +16,5 @@ kill @e[type=armor_stand,tag=puzzle.clearspace,scores={puzzle.value=35..}]
 
 
 
-execute as @a[tag=flcme.dev.size] run function puzzle:dev/size
+execute as @a[tag=flcme.shrink.1] run function puzzle:dev/size
+execute as @a[tag=flcme.shrink.2] run function puzzle:dev/size
